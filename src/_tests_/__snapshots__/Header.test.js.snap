@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Matches DOM Snapshot 1`] = `
+<div
+  className="sc-bcXHqe fTAxBi"
+>
+  <img
+    alt="Logo"
+    src="disney-icon-big.png"
+  />
+  <div
+    className="sc-gswNZR bKdiIt"
+    role="heading"
+  >
+    Disney Characters
+  </div>
+</div>
+`;
