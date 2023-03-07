@@ -19,7 +19,13 @@ I have implemented some tests in components, but not for all cases, due to lack 
 
 ### `Imporant Notes:`
 
-1) The user can't select the number of characters per page, because API doesn't support this capability. 
+1) API doesn't support paging when you use filters (name and tvShow). This can lead to lagging if the count of results is very big.
+
+2) The user can't select the number of characters per page, because API doesn't support this capability. 
 https://github.com/ManuCastrillonM/disney-api/blob/c3ed7510006689c57ae0197a3cbf35b228e21ecb/src/services/crud.js#L6
 
-2) API doesn't support paging when you use filters (name and tvShow). This can lead to lagging if the count of results is very big.
+## UPDATE: 
+At 07/03/23, after I created it in as a new issue in disney-api, they fixed it and now dynamic page size is working properly.
+https://github.com/ManuCastrillonM/disney-api/issues/25
+
+
