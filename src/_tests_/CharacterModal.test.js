@@ -62,8 +62,8 @@ describe('Show modal with specific character', () => {
 
     fireEvent.click(within(accordionVideoGames).getByRole('button'))
 
-    const { getAllByRole } = within(accordionVideoGames)
-    const videoGames = getAllByRole('listitem')
+    const { queryAllByRole } = within(accordionVideoGames)
+    const videoGames = queryAllByRole('listitem')
     expect(videoGames.length).toBe(characterToShow.videoGames.length)
     videoGames.forEach((videoGame, index) =>
       expect(videoGame.textContent).toBe(characterToShow.videoGames[index])
@@ -89,8 +89,8 @@ describe('Show modal with specific character', () => {
 
     fireEvent.click(within(accordionTvShows).getByRole('button'))
 
-    const { getAllByRole } = within(accordionTvShows)
-    const tvShows = getAllByRole('listitem')
+    const { queryAllByRole } = within(accordionTvShows)
+    const tvShows = queryAllByRole('listitem')
     expect(tvShows.length).toBe(characterToShow.tvShows.length)
     tvShows.forEach((tvShow, index) =>
       expect(tvShow.textContent).toBe(characterToShow.tvShows[index])
