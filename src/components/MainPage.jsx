@@ -34,6 +34,8 @@ export default function MainPage() {
       return fetch(url).then((res) => res.json())
     },
     {
+      //This flag tells React Query to keep and display previous data while refetching in the background,
+      // which reduces perceived latency and prevents UI flickers.
       keepPreviousData: true,
     }
   )

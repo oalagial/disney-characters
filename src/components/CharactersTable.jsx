@@ -44,6 +44,11 @@ const CharactersTable = ({
   const [orderBy, setOrderBy] = React.useState()
   const dispatch = useDispatch()
 
+  // The handleRequestSort function is responsible for sorting a column in either ascending or
+  // descending order, based on the current order and orderBy values.
+  // This function takes in two params:
+  // event: the click event
+  // property: the new column that user want to sort by
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc'
     setOrder(isAsc ? 'desc' : 'asc')

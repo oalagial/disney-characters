@@ -11,7 +11,7 @@ const SearchBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `
-
+// This component is a Search Bar for filtering based on name and TV show.
 const SearchBar = ({ handleSearchButtonClicked }) => {
   const [filterTvShow, setFilterTvShow] = useState('')
   const [filterName, setFilterName] = useState('')
@@ -24,6 +24,7 @@ const SearchBar = ({ handleSearchButtonClicked }) => {
           data-testid="name-input"
           variant="outlined"
           onChange={(e) => {
+            // Update filterName state when user types into the name search field
             setFilterName(e.target.value)
           }}
           sx={{ flexGrow: 1, marginLeft: '10px' }}
@@ -33,11 +34,13 @@ const SearchBar = ({ handleSearchButtonClicked }) => {
           data-testid="tvShow-input"
           variant="outlined"
           onChange={(e) => {
+            // Update filterTvShow state when user types into the TV show search field
             setFilterTvShow(e.target.value)
           }}
           sx={{ flexGrow: 1, marginLeft: '10px' }}
         />
       </div>
+      {/* Button that triggers handleSearchButtonClicked function with current filterName and filterTvShow values */}
       <Button
         variant="contained"
         onClick={() =>

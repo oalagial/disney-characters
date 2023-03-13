@@ -8,6 +8,8 @@ import CharacterModal from './components/CharacterModal'
 
 const queryClient = new QueryClient()
 
+// Overall, this component establishes an environment for different sub-components (Header, MainPage, CharacterModal)
+// to live inside, and provides a query client for performing data requests through react-query.
 function App() {
   return (
     <div className="App">

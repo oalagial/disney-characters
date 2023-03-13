@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { closeCharacterModal } from '../features/modal/modalSlice'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
+// This component renders a modal that displays detailed information about a selected character.
 const CharacterModal = () => {
   const dispatch = useDispatch()
   const shownCharacter = useSelector((state) => state.modal.shownCharacter)
